@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/Common/MyRouters.dart';
 import 'package:flutter_application_1/pages/LoginPage.dart';
-import 'package:flutter_application_1/pages/MyHomePage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,8 +14,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
+      onGenerateRoute: MyRouters.generateRoute,
+      initialRoute: ROUTE_LOGIN,
       theme: ThemeData(
-
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blueAccent),
         useMaterial3: true,
       ),

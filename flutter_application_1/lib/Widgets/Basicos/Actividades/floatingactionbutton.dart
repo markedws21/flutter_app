@@ -1,6 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/pages/playlistpage.dart';
+import 'package:flutter_application_1/Common/MyRouters.dart';
 
 class MyfloatingactionbuttonCF extends StatelessWidget{
   const MyfloatingactionbuttonCF({super.key});
@@ -9,7 +8,7 @@ class MyfloatingactionbuttonCF extends StatelessWidget{
   Widget build(BuildContext context) {
     return FloatingActionButton(
       onPressed: (){
-        Navigator.pop(context);
+        Navigator.pushNamedAndRemoveUntil(context, ROUTE_PLAY_LIST,(Route<dynamic>route)=>false);
       },
       backgroundColor: Colors.yellow,
       elevation: 20,
