@@ -15,7 +15,8 @@ class MyRichText extends StatelessWidget{
       children: [
         TextSpan(
           text: "Inicia Sesión",style: TextStyle(
-            color: Colors.black
+            color: Colors.black,
+            decoration: TextDecoration.underline,
           )
         )
       ]

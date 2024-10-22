@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/Widgets/myrichtext.dart';
-import 'package:flutter_application_1/Widgets/mytext.dart';
+import 'package:flutter_application_1/Widgets/mybuttons.dart';
+
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
   final String title;
@@ -16,6 +16,6 @@ class _MyHomePageState extends State<MyHomePage> {
       backgroundColor: Colors.white,
 
       body:SafeArea(
-        child: MyRichText(),));
+        child: MyButtons(),));
   }
 }
