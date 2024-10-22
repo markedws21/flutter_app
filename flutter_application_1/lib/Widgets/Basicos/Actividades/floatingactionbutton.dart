@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/pages/playlistpage.dart';
 
 class MyfloatingactionbuttonCF extends StatelessWidget{
   const MyfloatingactionbuttonCF({super.key});
@@ -7,8 +9,7 @@ class MyfloatingactionbuttonCF extends StatelessWidget{
   Widget build(BuildContext context) {
     return FloatingActionButton(
       onPressed: (){
-        // ignore: avoid_print
-        print("FloatingActionButton");
+        Navigator.pop(context);
       },
       backgroundColor: Colors.yellow,
       elevation: 20,
