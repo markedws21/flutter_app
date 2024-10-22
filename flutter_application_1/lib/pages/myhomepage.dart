@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/Widgets/myappbar.dart';
-import 'package:flutter_application_1/Widgets/mybuttons.dart';
-import 'package:flutter_application_1/Widgets/myfloatingactionbutton.dart';
+import 'package:flutter_application_1/Widgets/Basicos/Actividades/appbarCF.dart';
+import 'package:flutter_application_1/Widgets/Basicos/Actividades/floatingactionbutton.dart';
+import 'package:flutter_application_1/Widgets/Basicos/Actividades/imageCF.dart';
+import 'package:flutter_application_1/Widgets/Basicos/myappbar.dart';
+import 'package:flutter_application_1/Widgets/Basicos/mybuttons.dart';
+import 'package:flutter_application_1/Widgets/Basicos/myfloatingactionbutton.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
@@ -16,10 +19,10 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return const Scaffold(
       backgroundColor: Colors.white,
-      floatingActionButton: const Myfloatingactionbutton(),
+      floatingActionButton: MyfloatingactionbuttonCF(),
       floatingActionButtonLocation: FloatingActionButtonLocation.startFloat,
-      appBar: MyAppBar(),
+      appBar: MyAppBarCF(),
       body: SafeArea(
-      child: MyButtons(),));
+      child: Center(child: MyImageCF()),),);
   }
 }

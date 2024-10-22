@@ -1,26 +1,26 @@
 import 'package:flutter/material.dart';
 
-class MyAppBar extends StatelessWidget implements PreferredSizeWidget{
-  const MyAppBar({super.key});
+class MyAppBarCF extends StatelessWidget implements PreferredSizeWidget{
+  const MyAppBarCF({super.key});
 
   @override
   Widget build(BuildContext context) {
     return AppBar(
-        title: const Text("Menú",style: TextStyle(
+        title: const Text("Inicio",style: TextStyle(
           color: Colors.white,
         ),),
-        backgroundColor: Colors.blue,
+        backgroundColor: Colors.green,
         elevation: 30,
         shadowColor: Colors.black87,
         toolbarOpacity: 0.5,
-        centerTitle: false,
+        centerTitle: true,
         leading: const Icon(
-          Icons.arrow_back,
+          Icons.star_outline_sharp,
           color: Colors.white,
           ),
         actions: const [
           Icon(
-          Icons.search,
+          Icons.edit,
           color: Colors.white,
           ),
           Icon(
@@ -28,11 +28,9 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget{
           color: Colors.white,
           ),
         ],
-        toolbarHeight: 100,
       );
   }
   
   @override
-  // TODO: implement preferredSize
-  Size get preferredSize => Size.fromHeight(kToolbarHeight);
+  Size get preferredSize => const Size.fromHeight(250);
 }
