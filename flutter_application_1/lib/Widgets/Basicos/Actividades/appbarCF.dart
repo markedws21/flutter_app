@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 
+// ignore: must_be_immutable
 class MyAppBarCF extends StatelessWidget implements PreferredSizeWidget{
-  const MyAppBarCF({super.key});
+
+  String title;
+  MyAppBarCF(this.title, {super.key});
 
   @override
   Widget build(BuildContext context) {
     return AppBar(
-        title: const Text("Inicio",style: TextStyle(
-          color: Colors.white,
-        ),),
+        title: Text(title),
         backgroundColor: Colors.green,
         elevation: 30,
         shadowColor: Colors.black87,

@@ -1,7 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/pages/NowPlayPage.dart';
-import 'package:flutter_application_1/pages/myhomepage.dart';
 
 class PlayListPage extends StatefulWidget{
   const PlayListPage({super.key});

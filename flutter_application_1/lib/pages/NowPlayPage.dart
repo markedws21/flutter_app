@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/pages/myhomepage.dart';
 
 class NowPlayPage extends StatefulWidget{
   const NowPlayPage({super.key});

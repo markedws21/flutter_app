@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/pages/LoginPage.dart';
 import 'package:flutter_application_1/pages/MyHomePage.dart';
@@ -19,16 +21,16 @@ class MyRouters {
   static Route<dynamic>generateRoute(RouteSettings settings){
     switch(settings.name){
       case "/home":
-        return PageTransition(child: const MyHomePage(), type: PageTransitionType.fade,
-        settings: settings,alignment: Alignment.center);
+        return PageTransition(child: MyHomePage(), type: PageTransitionType.scale,
+        settings: settings,alignment: Alignment.bottomCenter);
       case "/login":
-        return MaterialPageRoute(builder: (_)=>LoginPage());
+        return MaterialPageRoute(builder: (_)=>const LoginPage());
       case "/play_list":
-        return MaterialPageRoute(builder: (_)=>PlayListPage());
+        return MaterialPageRoute(builder: (_)=>const PlayListPage());
       case "/now_playing":
-        return MaterialPageRoute(builder: (_)=>NowPlayPage());
+        return MaterialPageRoute(builder: (_)=>const NowPlayPage());
       default:
-        return MaterialPageRoute(builder: (_)=>LoginPage());
+        return MaterialPageRoute(builder: (_)=>const LoginPage());
     }
   }
 }

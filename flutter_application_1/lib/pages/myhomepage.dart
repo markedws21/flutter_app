@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/Common/HomeArguments.dart';
 import 'package:flutter_application_1/Widgets/Basicos/Actividades/appbarCF.dart';
 import 'package:flutter_application_1/Widgets/Basicos/Actividades/floatingactionbutton.dart';
-import 'package:flutter_application_1/Widgets/Basicos/Actividades/imageCF.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
@@ -13,12 +13,13 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    HomeArguments homeArguments= ModalRoute.of(context)!.settings.arguments as HomeArguments;
+    return Scaffold(
       backgroundColor: Colors.white,
-      floatingActionButton: MyfloatingactionbuttonCF(),
+      floatingActionButton: const MyfloatingactionbuttonCF(),
       floatingActionButtonLocation: FloatingActionButtonLocation.startFloat,
-      appBar: MyAppBarCF(),
+      appBar: MyAppBarCF(homeArguments.title),
       body: SafeArea(
-      child: Center(child: MyImageCF()),),);
+      child: Center(child: Text(homeArguments.message)),),);
   }
 }
