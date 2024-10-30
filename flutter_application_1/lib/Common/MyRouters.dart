@@ -21,7 +21,7 @@ class MyRouters {
   static Route<dynamic>generateRoute(RouteSettings settings){
     switch(settings.name){
       case "/home":
-        return PageTransition(child: MyHomePage(), type: PageTransitionType.scale,
+        return PageTransition(child: const MyHomePage(), type: PageTransitionType.scale,
         settings: settings,alignment: Alignment.bottomCenter);
       case "/login":
         return MaterialPageRoute(builder: (_)=>const LoginPage());
